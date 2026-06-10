@@ -9,6 +9,10 @@ const HomeRedirect = () => {
         return <p>Loading...</p>
     } 
 
+    if (!user) {
+        return <Navigate to="/login" replace />
+    }
+
     if (user.role === "admin") {
         return <Navigate to="/admin-dashboard" replace />
     }
