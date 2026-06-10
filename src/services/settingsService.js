@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:5000/api"
+    baseURL: "https://ems-api-green.vercel.app/api"
 })
 
 export const changePassword = async (data) => {
