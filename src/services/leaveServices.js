@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://ems-api-green.vercel.app/api/leave",
+  baseURL: "https://ems-api-alpha.vercel.app/api/leave",
 });
 
 export const requestLeave = async (data) => {

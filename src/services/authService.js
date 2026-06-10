@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({
-    baseURL: "https://ems-api-green.vercel.app/api/auth"
+    baseURL: "https://ems-api-alpha.vercel.app/api/auth"
 })
 
 export const loginUser = async (data) => {
@@ -15,5 +15,6 @@ export const verifyUsers = async (token) => {
             "Authorization": `Bearer ${token}`
         }
     })
+    console.log(response)
     return response.data
 }

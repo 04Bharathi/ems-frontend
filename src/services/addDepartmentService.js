@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "https://ems-api-green.vercel.app/api/department"
+    baseURL: "https://ems-api-alpha.vercel.app/api/department"
 })
 
 export const addDepartmentApi = async (data, token) => {

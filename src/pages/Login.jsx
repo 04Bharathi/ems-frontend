@@ -38,8 +38,8 @@ const Login = () => {
                 }
             }
         } catch(e) {
-            setError(e.response.data.message)
-            console.log(e.response.data.message)
+            
+            console.log(e.response)
         }
         
     };
