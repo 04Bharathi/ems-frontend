@@ -58,11 +58,11 @@ const EmployeeList = () => {
           name: emp.userId.name,
           dob: new Date(emp.dob).toLocaleDateString(),
 
-          profileImageUrl: `https://ems-api-alpha.vercel.app/${emp.userId.profileImage}`,
+          profileImageUrl: `https://ems-api-alpha.vercel.app/uploads/${emp.userId.profileImage}`,
 
           profileImage: (
             <img
-              src={`http://localhost:5000/uploads/${emp.userId.profileImage}`}
+              src={`https://ems-api-alpha.vercel.app/uploads/${emp.userId.profileImage}`}
               alt=""
               className="w-12 h-12 rounded-full object-cover border border-gray-300"
             />
