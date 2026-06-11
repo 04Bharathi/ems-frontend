@@ -17,7 +17,7 @@ export const getDepartmentList = async () => {
 }
 
 const API = axios.create({
-  baseURL: "https://ems-api-alpha.vercel.app/api/employee"
+  baseURL: "http://localhost:5000/api/employee"
 })
 
 export const addEmployee = async (data, token) => {

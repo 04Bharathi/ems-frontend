@@ -4,8 +4,6 @@ import { Navigate } from 'react-router-dom'
 
 const RoleBasedRoute = ({ children, validRoles }) => {
   const { user, loading } = useAuth()
-  console.log("user:",user)
-  console.log("validRoles:", validRoles)
 
   if (loading) {
     return (

@@ -13,7 +13,6 @@ import Add from './components/salary/Add'
 import ViewSalary from './components/salary/ViewSalary'
 import Summary from './components/employeeDashboard/Summary'
 import ViewEmployee from './components/employees/ViewEmployee'
-import View from './components/employeeDashboard/View'
 import LeaveList from './components/leaves/LeaveList'
 import AddLeave from './components/leaves/AddLeave'
 import Settings from './components/employeeDashboard/Settings'
@@ -21,6 +20,7 @@ import Leaves from './components/leaves/Leaves'
 import LeaveDetails from './components/leaves/LeaveDetails'
 import LeavesHistory from './components/leaves/LeavesHistory'
 import HomeRedirect from './utils/HomeRedirect'
+import Unauthorized from './pages/Unauthorized'
 
 function App() {
 
@@ -47,10 +47,11 @@ function App() {
           <Route path='/admin-dashboard/leaves/id/:id' element={<LeaveDetails /> }></Route>
           <Route path='/admin-dashboard/leaves/history/:id' element={<LeavesHistory /> }></Route>
           <Route path='/admin-dashboard/settings' element={<Settings /> }></Route>
+          <Route path="*" element={<Navigate to="/unauthorized" replace />} />
         </Route>
         <Route path='/employee-dashboard' element={
           <PrivateRoute>
-            <RoleBasedRoute validRoles={["admin","employee"]}>
+            <RoleBasedRoute validRoles={["employee"]}>
               <EmployeeDashboard />
             </RoleBasedRoute>
           </PrivateRoute>
@@ -61,9 +62,10 @@ function App() {
           <Route path='/employee-dashboard/leaves/request' element={<AddLeave />}></Route>
           <Route path='/employee-dashboard/salary/:id' element={<ViewSalary />}></Route>
           <Route path='/employee-dashboard/settings' element={<Settings />}></Route>
+          <Route path="*" element={<Navigate to="/unauthorized" replace />} />
 
         </Route>
-        
+        <Route path="/unauthorized" element={<Unauthorized />} />
 
       </Routes>
     </BrowserRouter>
