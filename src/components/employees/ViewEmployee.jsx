@@ -23,7 +23,7 @@ const ViewEmployee = ({}) => {
             gender: emp.gender,
             department: emp.department.dep_name,
             maritalStatus: emp.maritalStatus,
-            profileImage: `http://localhost:5000/uploads/${emp.userId.profileImage}`,
+            profileImage: `https://ems-api-red.vercel.app/uploads/${emp.userId.profileImage}`,
           };
           setSelectedEmployee(data);
           console.log(data);

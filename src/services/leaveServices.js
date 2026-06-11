@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/leave",
+  baseURL: "https://ems-api-red.vercel.app/api/leave",
 });
 
 export const requestLeave = async (data) => {

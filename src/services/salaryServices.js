@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/salary",
+  baseURL: "https://ems-api-red.vercel.app/api/salary",
 });
 
 export const addSalary = async (data, token) => {
